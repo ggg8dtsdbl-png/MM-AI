@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111322">
+  <meta name="description" content="MM AI — turn your ideas into videos.">
+  <title>MM AI — AI Video Studio</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">MM</div>
+      <div><div class="brand-name">MM AI</div><div class="brand-tag">AI VIDEO STUDIO</div></div>
+      <button class="credits" id="creditsBtn" type="button">✦ 10 credits</button>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">YOUR AI CREATIVE STUDIO</div>
+      <h1>Ideas into<br><span>moving stories.</span></h1>
+      <p>Create videos from a text prompt or a photo. Your imagination leads.</p>
+      <div class="hero-orb" aria-hidden="true">✦</div>
+    </section>
+
+    <nav class="tabs" aria-label="Creation type">
+      <button class="tab active" data-mode="text" type="button">✍ Text to Video</button>
+      <button class="tab" data-mode="photo" type="button">▧ Photo to Video</button>
+    </nav>
+
+    <section class="panel">
+      <label class="section-label" for="prompt">DESCRIBE YOUR VIDEO</label>
+      <textarea id="prompt" rows="4" placeholder="A golden lion walking through a grand palace at sunset..."></textarea>
+
+      <div id="photoPicker" class="photo-picker hidden">
+        <label for="photo">Choose a photo</label>
+        <input id="photo" type="file" accept="image/*">
+        <img id="photoPreview" alt="Selected photo preview" class="preview hidden">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label class="section-label" for="duration">DURATION</label>
+          <select id="duration">
+            <option>10 seconds</option><option>30 seconds</option>
+            <option>1 minute</option><option>2 minutes</option><option>3 minutes</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="section-label" for="style">VIDEO STYLE</label>
+          <select id="style">
+            <option>Realistic</option><option>3D Animation</option>
+            <option>Cinematic</option><option>Cartoon</option><option>Anime</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generate" class="primary" type="button">✦ Generate video</button>
+      <p id="notice" class="notice" role="status">Demo interface: connect an AI video service to generate real videos.</p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading"><h2>My creations</h2><span class="muted">Your library</span></div>
+      <div id="library" class="empty-state">
+        <div class="empty-icon">▧</div>
+        <strong>Your videos will appear here</strong>
+        <span>Generated videos will be saved to your library.</span>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading"><h2>More for creators</h2></div>
+      <div class="feature-grid">
+        <article class="feature"><b>◉</b><strong>Voice & music</strong><span>Hindi and English voice options</span></article>
+        <article class="feature"><b>⬇</b><strong>Export videos</strong><span>Save your finished creations</span></article>
+        <article class="feature"><b>♡</b><strong>Favorites</strong><span>Keep your best ideas close</span></article>
+        <article class="feature"><b>✧</b><strong>Premium studio</strong><span>Plans and extra credits later</span></article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="bottom-nav">
+        <button class="nav-item selected" type="button" data-page="Create">✦<span>Create</span></button>
+        <button class="nav-item" type="button" data-page="My Videos">▧<span>My Videos</span></button>
+        <button class="nav-item" type="button" data-page="Profile">◎<span>Profile</span></button>
+      </div>
+      <p>MM AI · Early preview · Video generation is not connected yet</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

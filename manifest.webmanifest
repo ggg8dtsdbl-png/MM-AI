@@ -1,0 +1,10 @@
+{
+  "name": "MM AI — AI Video Studio",
+  "short_name": "MM AI",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0e1020",
+  "theme_color": "#111322",
+  "description": "A mobile-first AI video creation studio preview.",
+  "icons": []
+}
